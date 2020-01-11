@@ -1,0 +1,279 @@
+/* Importing Normalize css */
+@import url("normalize.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*  Custom CSS ---------------------------- */
+body {
+	font-family: "Open Sans", sans-serif;
+	background-color: #f7f8fa;
+	background-image: url("../img/img-noise-361x370\ \(1\).png");
+}
+
+.heading {
+	font-size: 44px;
+	color: #075e54;
+	line-height: 60px;
+	font-weight: 700;
+	margin: 30px auto;
+}
+.container {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 30px;
+	text-align: center;
+}
+.flex {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.text_input_title {
+	width: 20%;
+	height: 30px;
+	outline: none;
+	font-weight: 300;
+	font-size: 18px;
+	background-color: rgb(255, 255, 255);
+	line-height: 34px;
+	resize: none;
+	padding: 14px 24px;
+	border-radius: 2px;
+	border: none;
+}
+.text_input {
+	width: 40%;
+	height: 30px;
+	outline: none;
+	font-weight: 300;
+	font-size: 18px;
+	background-color: rgb(255, 255, 255);
+	line-height: 34px;
+	resize: none;
+	padding: 14px 24px;
+	border-radius: 2px;
+	border: none;
+	/* border: 5px dashed #5050f59e; */
+	box-shadow: 0 0 2px 2px rgba(167, 195, 245, 0.767);
+	/* box-shadow: 0px -7px 17px 1px rgba(0, 0, 0, 0.56); */
+}
+.search {
+	width: 20%;
+	height: 30px;
+	outline: none;
+	font-weight: 300;
+	font-size: 18px;
+	background-color: rgb(255, 255, 255);
+	line-height: 34px;
+	resize: none;
+	padding: 14px 24px;
+	border-radius: 2px;
+	border: none;
+}
+/* .text_input:focus {
+	background-color: rgba(231, 234, 244, 0.057);
+	box-shadow: inset 0px 0px 35px -19px rgba(214, 223, 255, 0.65),
+		0 0 4px 4px rgb(218, 218, 218);
+} */
+
+.container_2 {
+	margin: 30px 30px;
+	display: flex;
+	flex-wrap: wrap;
+	/* grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto; */
+}
+.title_styles {
+	border-bottom: 1px solid rgba(213, 213, 213, 0.961);
+	padding: 10px 0;
+	font-size: 1.2rem;
+	color: rgb(77, 77, 77);
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+p {
+	width: 80%;
+}
+.copy_button {
+	color: #82a4ed;
+}
+.copy_button:hover {
+	color: #0e2f76;
+}
+.spanX {
+	color: #b1b1b1;
+}
+.spanX:hover {
+	color: #d9220e;
+	cursor: pointer;
+}
+.content_styles {
+	padding-top: 10px;
+}
+.show_clip {
+	max-width: 22%;
+	border-radius: 5px;
+	padding: 10px 25px;
+	line-height: 20px;
+	height: fit-content;
+	margin-right: 30px;
+	margin-bottom: 30px;
+	/* overflow: hidden; */
+	color: rgb(97, 97, 97);
+	background-color: rgba(249, 249, 249, 0.995);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.show_clip:hover {
+	cursor: pointer;
+	color: rgb(12, 12, 12);
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.clearAll {
+	padding: 10px 20px;
+	position: fixed;
+	right: 20px;
+	top: 50px;
+	font-size: 24px;
+	font-weight: 600;
+	background-color: rgba(232, 67, 48, 0.571);
+	color: #fff;
+	border: none;
+	outline: none;
+	border-radius: 50%;
+}
+.clearAll:hover {
+	background-color: rgb(242, 60, 60);
+}
