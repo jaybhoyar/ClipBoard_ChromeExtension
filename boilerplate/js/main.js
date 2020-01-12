@@ -83,9 +83,9 @@ function selectValue(event) {
 	}
 }
 function searchClips(event) {
-	if (event.keyCode === 13 && event.target.value.trim() != "") {
+	if (event.target.value.trim() != "") {
 		let searchTitle = event.target.value;
-		let searched = clips.filter(clip => clip.title == searchTitle);
+		let searched = clips.includes(clip => clip.title == searchTitle);
 		viewClips(searched);
 	} else {
 		viewClips(clips);

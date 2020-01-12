@@ -217,8 +217,8 @@ body {
 	font-size: 1.2rem;
 	color: rgb(77, 77, 77);
 	display: flex;
-  justify-content: space-between;
-  align-items: center;
+	justify-content: space-between;
+	align-items: center;
 }
 p {
 	width: 80%;
@@ -239,8 +239,24 @@ p {
 .content_styles {
 	padding-top: 10px;
 }
+@keyframes mymove {
+
+	0% {
+		top: 50px;
+		opacity: 0;
+  }
+  75%{
+    top: -20px;
+		opacity: 1;
+  }
+	100% {
+		top: 0px;
+		opacity: 1;
+	}
+}
+
 .show_clip {
-	max-width: 22%;
+	min-width: 22%;
 	border-radius: 5px;
 	padding: 10px 25px;
 	line-height: 20px;
@@ -253,6 +269,8 @@ p {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
+	position: relative;
+	animation: mymove 800ms;
 }
 .show_clip:hover {
 	cursor: pointer;
