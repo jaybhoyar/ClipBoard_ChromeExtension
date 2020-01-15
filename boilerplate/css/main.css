@@ -133,22 +133,47 @@ table {
 /*  Custom CSS ---------------------------- */
 body {
 	font-family: "Open Sans", sans-serif;
-	background-color: #f7f8fa;
-	background-image: url("../img/img-noise-361x370\ \(1\).png");
+	height: 97.5vh;
+	background: linear-gradient(
+		to right top,
+		#eb2193bb,
+		#dd1ea7c5,
+		#ca27bcc4,
+		#ae35cfd6,
+		#8743e1cf,
+		#a93cd8b7,
+		#c334cdd0,
+		#d82fc1cf,
+		#ff3b94b7,
+		#ff6a6dd4,
+		#ff9a58b7,
+		#fbc45fd6
+	);
+}
+a {
+	text-decoration: none;
+	margin-left: 8px;
 }
 .header {
 	display: flex;
+	justify-content: flex-end;
 	margin: 20px;
 	margin-bottom: 0;
 }
-
+.icons {
+	margin-right: 30px;
+}
 .link_icons {
 	width: 25px;
 	margin: 5px;
 }
+.link_icons:hover {
+	/* border-radius: 50%; */
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
 .heading {
 	font-size: 44px;
-	color: #075e54;
+	color: #1c1c1c;
 	line-height: 60px;
 	font-weight: 700;
 	margin: 30px auto;
