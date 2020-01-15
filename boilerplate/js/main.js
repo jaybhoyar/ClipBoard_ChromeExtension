@@ -83,10 +83,13 @@ function selectValue(event) {
 	}
 }
 function searchClips(event) {
-	if (event.target.value.trim() != "") {
-		let searchTitle = event.target.value;
-		let searched = clips.includes(clip => clip.title == searchTitle);
-		viewClips(searched);
+	if (event.target.value != "") {
+		let searchWord = event.target.value.toLowerCase();
+		debugger;
+		let searchedArr = clips.filter(clip =>
+			clip.title.toLowerCase().includes(searchWord)
+		);
+		viewClips(searchedArr);
 	} else {
 		viewClips(clips);
 	}
