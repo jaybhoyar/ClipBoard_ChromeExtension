@@ -144,13 +144,14 @@ a {
 	outline: none;
 	padding: 5px;
 	border: 1px solid #e0e6ed;
-	border-radius: 3px;
+  border-radius: 4px;
+  width: 200px;
 }
 .g_search:focus {
 	border: 1px solid rgba(181, 181, 181, 0.653);
 }
 .g_search::placeholder {
-	color: #d5d5d5;
+	color: #bdbdbd;
 }
 .header {
 	display: flex;
