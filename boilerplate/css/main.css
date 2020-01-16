@@ -240,10 +240,11 @@ a {
 
 .container_2 {
 	margin: 30px 30px;
-	display: flex;
-	flex-wrap: wrap;
-	/* grid-template-columns: auto auto auto;
-	grid-template-rows: auto auto; */
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-template-columns: repeat(4,1fr);
+	/* flex-wrap: wrap; */
+	
 }
 .title_styles {
 	border-bottom: 1px solid rgba(213, 213, 213, 0.961);
@@ -289,7 +290,7 @@ p {
 }
 
 .show_clip {
-	min-width: 22%;
+	width: 240px;
 	border-radius: 5px;
 	padding: 10px 25px;
 	line-height: 20px;
@@ -302,7 +303,9 @@ p {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	position: relative;
+  /* position: absolute;
+  left: 40px;
+  top: 50px; */
 	animation: mymove 400ms;
 }
 .show_clip:hover {

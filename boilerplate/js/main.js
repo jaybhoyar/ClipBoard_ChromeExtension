@@ -41,6 +41,7 @@ function viewClips(clipsArr) {
 		contentDiv.classList.add("content_styles");
 		parentDiv.setAttribute("data-id", clip.id);
 		parentDiv.classList.add("show_clip", "show_clip_header");
+		parentDiv.style.left = "30px";
 		titleP.innerText = clip.title;
 		contentDiv.innerText = clip.content;
 		titleDiv.append(titleP, spanX);
