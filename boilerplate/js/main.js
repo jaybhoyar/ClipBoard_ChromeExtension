@@ -5,6 +5,7 @@ let texttitle = document.querySelector(".text_input_title");
 let container = document.querySelector(".container_2");
 let clips = JSON.parse(localStorage.getItem("clipArr")) || [];
 let id = Date.now();
+let gSearch = document.getElementById("the_search_box");
 
 function createClips(event) {
 	if (
@@ -95,7 +96,13 @@ function searchClips(event) {
 		viewClips(clips);
 	}
 }
-
+function GoogleSearch(event) {
+	if (event.keyCode === 13) {
+		var box = document.getElementById("the_search_box");
+		window.location.href =
+			"http://www.google.com/search?q=" + escape(box.value);
+	}
+}
 // function randomColor() {
 // 	let words = "ABCDEF0123456789".split("");
 // 	let color = "#";
@@ -111,5 +118,7 @@ viewClips(clips);
 // textArea.addEventListener("keydown", createClips);
 textArea.addEventListener("keydown", createClips);
 search.addEventListener("keydown", searchClips);
+gSearch.addEventListener("keydown", GoogleSearch);
+
 //
 //  copy
