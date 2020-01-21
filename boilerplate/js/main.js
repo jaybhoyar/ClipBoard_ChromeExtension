@@ -37,7 +37,6 @@ function viewClips(clipsArr) {
 		let spanX = document.createElement("span");
 		spanX.classList.add("spanX");
 		spanX.textContent = "X";
-
 		titleDiv.classList.add("title_styles");
 		contentDiv.classList.add("content_styles");
 		parentDiv.setAttribute("data-id", clip.id);
@@ -77,11 +76,11 @@ function selectValue(event) {
 		event.target.style.fontSize = "1.5rem";
 	}
 	function removeCopied() {
-		// event.target.innerText = text;
+		// // event.target.innerText = text;
 		viewClips(clips);
 		// event.target.style.fontWeight = "400";
-		// event.target.style.fontSize = "1rem";
-		// event.target.style.color = "#000";
+		// // event.target.style.fontSize = "1rem";
+		// // event.target.style.color = "#000";
 	}
 }
 function searchClips(event) {
