@@ -244,6 +244,7 @@ a {
 	/* grid-template-columns: repeat(4, 1fr); */
 	flex-wrap: wrap;
 	display: flex;
+	position: relative;
 }
 .title_styles {
 	border-bottom: 1px solid rgba(213, 213, 213, 0.961);
@@ -252,7 +253,8 @@ a {
 	color: rgb(77, 77, 77);
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+  align-items: center;
+  width: 100%;
 }
 p {
 	width: 80%;
@@ -273,12 +275,16 @@ p {
 .content_styles {
 	font-family: monospace;
 	font-size: 14px;
-	padding-top: 10px;
+  padding-top: 10px;
+  width: 100%;
 }
 
 .show_clip {
+	/* position: absolute;
+	top: ;
+	left: auto; */
+	transform-origin: top left;
 	max-width: 300px;
-	min-width: fit-content;
 	border-radius: 3px;
 	padding: 10px 20px;
 	line-height: 20px;
