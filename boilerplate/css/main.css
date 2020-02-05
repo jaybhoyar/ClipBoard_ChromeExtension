@@ -241,9 +241,9 @@ a {
 
 .container_2 {
 	margin: 30px 30px;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	/* flex-wrap: wrap; */
+	/* grid-template-columns: repeat(4, 1fr); */
+	flex-wrap: wrap;
+	display: flex;
 }
 .title_styles {
 	border-bottom: 1px solid rgba(213, 213, 213, 0.961);
@@ -289,22 +289,19 @@ p {
 }
 
 .show_clip {
-	width: 240px;
+	max-width: 300px;
+	min-width: fit-content;
 	border-radius: 3px;
-	padding: 10px 25px;
+	padding: 10px 20px;
 	line-height: 20px;
 	height: fit-content;
-	margin-right: 30px;
-	margin-bottom: 30px;
-	/* overflow: hidden; */
+	margin-right: 16px;
+	margin-bottom: 16px;
 	color: rgb(97, 97, 97);
 	background-color: rgba(249, 249, 249, 0.995);
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	/* position: absolute;
-  left: 40px;
-  top: 50px; */
 	animation: mymove 400ms;
 }
 .show_clip:hover {
