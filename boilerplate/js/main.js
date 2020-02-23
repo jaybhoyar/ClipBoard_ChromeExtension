@@ -60,28 +60,29 @@ function deleteClip(event) {
 }
 function selectValue(event) {
 	// console.log(event.target.innerHTML);
+	window.getSelection().removeAllRanges();
 	var range = document.createRange();
 	range.selectNode(event.target);
-	window.getSelection().removeAllRanges(); // clear current selection
+	// clear current selection
 	window.getSelection().addRange(range); // to select text
 	document.execCommand("copy");
-	//window.getSelection().removeAllRanges(); // to deselect
+	window.getSelection().removeAllRanges(); // to deselect
 	setTimeout(addCopied, 0);
 	setTimeout(removeCopied, 2000);
-	function addCopied() {
-		event.target.innerText = "Copied!";
-		event.target.style.color = "#0A4DC8";
-		event.target.style.padding = "20px 0";
-		event.target.style.fontWeight = "600";
-		event.target.style.fontSize = "1.5rem";
-	}
-	function removeCopied() {
-		// // event.target.innerText = text;
-		viewClips(clips);
-		// event.target.style.fontWeight = "400";
-		// // event.target.style.fontSize = "1rem";
-		// // event.target.style.color = "#000";
-	}
+}
+function addCopied() {
+	event.target.innerText = "Copied!";
+	event.target.style.color = "#0A4DC8";
+	event.target.style.padding = "20px 0";
+	event.target.style.fontWeight = "600";
+	event.target.style.fontSize = "1.5rem";
+}
+function removeCopied() {
+	// // event.target.innerText = text;
+	viewClips(clips);
+	// event.target.style.fontWeight = "400";
+	// // event.target.style.fontSize = "1rem";
+	// // event.target.style.color = "#000";
 }
 function searchClips(event) {
 	if (event.target.value != "") {
