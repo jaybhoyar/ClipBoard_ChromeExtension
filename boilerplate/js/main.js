@@ -6,7 +6,7 @@ let container = document.querySelector(".container_2");
 let clips = JSON.parse(localStorage.getItem("clipArr")) || [];
 let id = Date.now();
 let gSearch = document.getElementById("the_search_box");
-
+let textToCopy = document.querySelector(".content_styles");
 function createClips(event) {
 	if (
 		event.keyCode == 13 &&
@@ -43,7 +43,7 @@ function viewClips(clipsArr) {
 		parentDiv.classList.add("show_clip", "show_clip_header");
 		parentDiv.draggable = "true";
 		titleP.innerText = clip.title;
-		contentDiv.innerText = clip.content;
+		contentDiv.innerHTML = clip.content;
 		titleDiv.append(titleP, spanX);
 		parentDiv.append(titleDiv, contentDiv);
 		container.append(parentDiv);
@@ -59,31 +59,30 @@ function deleteClip(event) {
 	viewClips(clips);
 }
 function selectValue(event) {
-	// console.log(event.target.innerHTML);
-	window.getSelection().removeAllRanges();
-	var range = document.createRange();
-	range.selectNode(event.target);
-	// clear current selection
+  var range = document.createRange();
+  textToCopy
+	range.selectNode(textToCopy);
+	window.getSelection().removeAllRanges(); // clear current selection
 	window.getSelection().addRange(range); // to select text
 	document.execCommand("copy");
-	window.getSelection().removeAllRanges(); // to deselect
 	setTimeout(addCopied, 0);
 	setTimeout(removeCopied, 2000);
+	function addCopied() {
+		event.target.innerText = "Copied!";
+		event.target.style.color = "#0A4DC8";
+		event.target.style.padding = "20px 0";
+		event.target.style.fontWeight = "600";
+		event.target.style.fontSize = "1.5rem";
+	}
+	function removeCopied() {
+		// // event.target.innerText = text;
+		viewClips(clips);
+		// event.target.style.fontWeight = "400";
+		// // event.target.style.fontSize = "1rem";
+		// // event.target.style.color = "#000";
+	}
 }
-function addCopied() {
-	event.target.innerText = "Copied!";
-	event.target.style.color = "#0A4DC8";
-	event.target.style.padding = "20px 0";
-	event.target.style.fontWeight = "600";
-	event.target.style.fontSize = "1.5rem";
-}
-function removeCopied() {
-	// // event.target.innerText = text;
-	viewClips(clips);
-	// event.target.style.fontWeight = "400";
-	// // event.target.style.fontSize = "1rem";
-	// // event.target.style.color = "#000";
-}
+
 function searchClips(event) {
 	if (event.target.value != "") {
 		let searchWord = event.target.value.toLowerCase();
