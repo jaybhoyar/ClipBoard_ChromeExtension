@@ -202,14 +202,27 @@ p {
 	color: #0e2f76;
 }
 .spanX {
-	color: #b1b1b1;
+	position: absolute;
+	right: -7px;
+	top: -7px;
+	width: 20px;
+	height: 20px;
+
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: transparent;
+	font-weight: bold;
 }
 .spanX:hover {
-	color: #d9220e;
+	background: #fd5335;
+	color: #ffffff;
 	cursor: pointer;
 }
 
 .show_clip {
+	position: relative;
 	max-width: 150px;
 	margin: 10px 20px;
 	grid-row-end: span 2;

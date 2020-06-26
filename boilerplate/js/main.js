@@ -23,32 +23,33 @@ function createClips(event) {
 function viewClips(clipsArr) {
 	container.innerHTML = "";
 	clipsArr.forEach((clip) => {
+		// Defining elements
 		let parentDiv = document.createElement("div");
-
 		let contentDiv = document.createElement("div");
-		let titleP = document.createElement("p");
 		let spanX = document.createElement("span");
-		spanX.classList.add("spanX");
-		spanX.textContent = "X";
-		contentDiv.classList.add("content_styles");
+		// Add Styling
 		parentDiv.setAttribute("data-id", clip.id);
 		parentDiv.classList.add("show_clip");
-		titleP.innerText = clip.title;
+		contentDiv.classList.add("content_styles");
+		spanX.classList.add("spanX");
+		// Add Text
 		contentDiv.innerText = clip.content;
-		parentDiv.append(contentDiv);
+		spanX.innerHTML = "-";
+		// Appending
+		parentDiv.append(spanX, contentDiv);
 		container.append(parentDiv);
-		spanX.addEventListener("click", deleteClip);
+		// Event Listeners
+		parentDiv.addEventListener("click", deleteClip);
 		contentDiv.addEventListener("click", selectValue);
 	});
 }
 function deleteClip(event) {
-	let target = event.target.parentElement;
-
-	clips = clips.filter(
-		(clip) => !(target.parentElement.dataset.id == clip.id)
-	);
-	localStorage.setItem("clipArr", JSON.stringify(clips));
-	viewClips(clips);
+	if (event.target.tagName === "SPAN") {
+		let target = event.target.parentElement;
+		clips = clips.filter((clip) => !(target.dataset.id == clip.id));
+		localStorage.setItem("clipArr", JSON.stringify(clips));
+		viewClips(clips);
+	}
 }
 function selectValue(event) {
 	var range = document.createRange();
