@@ -184,7 +184,7 @@ body {
 	max-width: 100%;
 	display: grid;
 	grid-gap: 1rem;
-	grid-template: repeat(7, 3vw) / repeat(8, 1fr);
+	grid-template: repeat(7, 3vw) / repeat(6, 1fr);
 	grid-column: full-start / full-end;
 	grid-row-end: span 2;
 }
@@ -219,16 +219,16 @@ p {
 	color: transparent;
 	font-weight: bold;
 }
-/* .spanX:hover {
+.spanX:hover {
 	background: #fd5335;
 	color: #ffffff;
 	cursor: pointer;
-} */
+}
 
 .show_clip {
 	font-family: monospace;
 	position: relative;
-	max-width: 150px;
+	max-width: 300px;
 	border-radius: 7px;
 	padding: 10px 25px;
 	line-height: 20px;
@@ -259,4 +259,8 @@ p {
 	align-items: center;
 	color: transparent;
 	font-weight: bold;
+}
+
+.content_styles {
+	font-size: 0.8rem;
 }
